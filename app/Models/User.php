@@ -45,4 +45,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function isGestorLocatarios(): bool
+    {
+        return $this->role === 'gestor_locatarios';
+    }
+
+    public function isGestorImobiliarias(): bool
+    {
+        return $this->role === 'gestor_imobiliarias';
+    }
 }
